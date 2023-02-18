@@ -25,3 +25,28 @@ resource "aws_s3_bucket_cors_configuration" "bucket_cors" {
     allowed_origins = ["*"]
   }
 }
+
+resource "aws_s3_bucket_policy" "allow_access_from_anyone" {
+  bucket = aws_s3_bucket.bucket.id
+  policy = data.aws_iam_policy_document.allow_access_from_anyone.json
+}
+
+data "aws_iam_policy_document" "allow_access_from_anyone" {
+  statement {
+    sid = "PublicRead"
+    effect = "Allow"
+    principals {
+      type        = "AWS"
+      identifiers = ["*"]
+    }
+
+    actions = [
+      "s3:GetObject",
+      "s3:GetObjectVersion",
+    ]
+
+    resources = [
+      "${aws_s3_bucket.bucket.arn}/*",
+    ]
+  }
+}
