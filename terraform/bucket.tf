@@ -13,8 +13,8 @@ resource "aws_s3_bucket_public_access_block" "bucket_public_access" {
 
   block_public_acls       = false
   block_public_policy     = false
-  ignore_public_acls      = true
-  restrict_public_buckets = true
+  ignore_public_acls      = false
+  restrict_public_buckets = false
 }
 
 resource "aws_s3_bucket_cors_configuration" "bucket_cors" {
