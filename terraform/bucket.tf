@@ -11,8 +11,8 @@ resource "aws_s3_bucket" "bucket" {
 resource "aws_s3_bucket_public_access_block" "bucket_public_access" {
   bucket = aws_s3_bucket.bucket.id
 
-  block_public_acls       = true
-  block_public_policy     = true
+  block_public_acls       = false
+  block_public_policy     = false
   ignore_public_acls      = true
   restrict_public_buckets = true
 }
@@ -33,7 +33,7 @@ resource "aws_s3_bucket_policy" "allow_access_from_anyone" {
 
 data "aws_iam_policy_document" "allow_access_from_anyone" {
   statement {
-    sid = "PublicRead"
+    sid    = "PublicRead"
     effect = "Allow"
     principals {
       type        = "AWS"
