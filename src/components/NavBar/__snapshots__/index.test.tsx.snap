@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavBar renders navbar unchanged 1`] = `
+<div>
+  <nav
+    class="section-wrapper py-4 border-b border-stone-900"
+  >
+    <section
+      class="flex justify-between"
+    >
+      <a
+        class="text-gray-300 hover:text-white"
+        href="/"
+      >
+        Home
+      </a>
+      <a
+        class="text-gray-300 hover:text-white"
+        href="/about"
+      >
+        About Me
+      </a>
+    </section>
+  </nav>
+</div>
+`;

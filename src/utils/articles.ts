@@ -31,7 +31,6 @@ export async function getArticle(slug: string): Promise<Post<Article> | null> {
       serialized,
     }
   } catch (err) {
-    console.error("Couldn't find article: ", slug)
     return null
   }
 }

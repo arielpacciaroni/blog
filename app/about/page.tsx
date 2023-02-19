@@ -1,8 +1,8 @@
-import { MdxContent } from '@/src/components/MdxContent'
+import MdxContent from '@/src/components/MdxContent'
 import { serialize } from 'next-mdx-remote/serialize'
 
 const AboutMeContent = `
-![Some text](https://images.unsplash.com/photo-1676211986358-8b57ad9a2df0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80)
+![Some text](https://apacciaroni-blog.s3.eu-west-1.amazonaws.com/6134efb49383c36b04b3b73807486bf0.jpg)
 
 # Greetings!
 
@@ -34,12 +34,10 @@ export default async function AboutMe() {
   const source = await serialize(AboutMeContent)
 
   return (
-    <>
-      <div>
-        <h1 className="text-white text-3xl">About Me</h1>
-        <hr className="my-4 border border-gray-800" />
-        <MdxContent source={source} />
-      </div>
-    </>
+    <div>
+      <h1 className="text-white text-3xl">About Me</h1>
+      <hr className="my-4 border border-gray-800" />
+      <MdxContent source={source} />
+    </div>
   )
 }

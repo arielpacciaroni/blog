@@ -1,6 +1,8 @@
 'use client'
 
+/* eslint-disable react/jsx-props-no-spreading */
 import { MDXRemote, type MDXRemoteSerializeResult } from 'next-mdx-remote'
+import Image from 'next/image'
 
 const MdxComponents = {
   p: (props: React.HTMLProps<HTMLParagraphElement>) => (
@@ -8,9 +10,12 @@ const MdxComponents = {
   ),
   img: (props: React.HTMLProps<HTMLImageElement>) => (
     <div className="mx-16">
-      <img
+      <Image
         className="rounded-t-lg shadow-lg w-full h-auto mx-auto"
-        {...props}
+        width={1280}
+        height={720}
+        src={props.src ?? ''}
+        alt={props.alt ?? ''}
       />
       <p className="bg-gray-800 rounded-b-lg text-center text-sm">
         {props.alt}
@@ -38,6 +43,6 @@ type MdxContentProps = {
   source: MDXRemoteSerializeResult
 }
 
-export function MdxContent({ source }: MdxContentProps) {
+export default function MdxContent({ source }: MdxContentProps) {
   return <MDXRemote {...source} components={MdxComponents} />
 }

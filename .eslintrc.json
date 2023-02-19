@@ -1,7 +1,11 @@
 {
-  "extends": ["next/core-web-vitals", "airbnb", "airbnb-typescript", "prettier"],
-  "plugins": ["prettier"],
+  "extends": ["next/core-web-vitals", "plugin:testing-library/react", "airbnb", "airbnb-typescript", "prettier"],
+  "plugins": ["testing-library", "prettier"],
   "rules": {
-    "prettier/prettier": "error"
+    "prettier/prettier": "error",
+    "react/react-in-jsx-scope": "off"
+  },
+  "parserOptions": {
+    "project": "./tsconfig.json"
   }
 }

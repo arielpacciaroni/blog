@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer renders footer unchanged 1`] = `
+<div>
+  <nav
+    class="mt-auto py-16 bg-stone-800"
+  >
+    <div
+      class="section-wrapper"
+    >
+      <div
+        class="flex justify-between gap-4"
+      >
+        <div>
+          <h3
+            class="text-gray-400 select-none"
+          >
+            Thanks!
+          </h3>
+          <p
+            class="text-sm"
+          >
+            with all ❤️ by
+             
+            <a
+              class="text-gray-100 hover:text-white"
+              href="https://www.linkedin.com/in/arielpacciaroni/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Ariel
+            </a>
+          </p>
+        </div>
+        <div>
+          <h3
+            class="text-gray-400 select-none"
+          >
+            Follow me
+          </h3>
+          <ul>
+            <li>
+              <a
+                class="text-gray-100 hover:text-white text-sm"
+                href="https://www.linkedin.com/in/arielpacciaroni/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                LinkedIn
+              </a>
+            </li>
+            <li>
+              <a
+                class="text-gray-100 hover:text-white text-sm"
+                href="https://github.com/arielpacciaroni"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                GitHub
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+</div>
+`;
