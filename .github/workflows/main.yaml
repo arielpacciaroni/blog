@@ -1,4 +1,4 @@
-name: "Terraform"
+name: "Main"
 
 on:
   push:
@@ -85,7 +85,7 @@ jobs:
 
             </details>
 
-            *Pusher: @${{ github.actor }}, Action: \`${{ github.event_name }}\`, Working Directory: \`${{ env.tf_actions_working_dir }}\`, Workflow: \`${{ github.workflow }}\`*`;
+            *Pusher: @${{ github.actor }}, Action: \`${{ github.event_name }}\`, Workflow: \`${{ github.workflow }}\`*`;
 
             if (botComment) {
               github.rest.issues.updateComment({
