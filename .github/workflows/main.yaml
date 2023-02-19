@@ -116,6 +116,8 @@ jobs:
       run:
         working-directory: ./
     steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v3
       - name: Login to Amazon ECR
         id: login-ecr
         uses: aws-actions/amazon-ecr-login@v1
